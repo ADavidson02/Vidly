@@ -29,4 +29,13 @@ const genres = [
   },
 ];
 
+app.post('/api/genres', (req, res) => {
+  const genre = {
+    id: genres.length + 1,
+    name: req.body.name,
+  };
+  genres.push(genre);
+  res.send(genre);
+});
+
 
