@@ -38,4 +38,7 @@ app.post('/api/genres', (req, res) => {
   res.send(genre);
 });
 
+app.get('/api/genres', (req, res) => {
+  res.send(genres);
+});
 
