@@ -53,4 +53,39 @@ Uri: GET /api/genres/:id
     "name": "drama"
   }
   ```
+#### Update a genre
+Request :
+```
+Uri: PUT /api/genres/:id
+
+  {
+    "id": "1",
+    "name": "fantasy"
+ }
+ ```
+ 
+ Response:
+ ```
+  {
+    "id": 1,
+    "name": "fantasy"
+  }
+  ```
+  #### Delete a genre 
+Request :
+```
+Uri: PUT /api/genres/:id
+
+  {
+    "id": "1",
+ }
+ ```
+ 
+ Response:
+ ```
+  {
+    "id": 1,
+    "name": "fantasy"
+  }
+  ```
   
