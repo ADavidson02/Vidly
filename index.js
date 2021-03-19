@@ -1,8 +1,28 @@
 
+const config = require('config')
+const helmet = require('helmet')
 const Joi = require('joi')
 const express = require('express');
 const app = express();
-app.use(express.json());
+const logger = require('./logger')
+const morgan = require('morgan')
+
+
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+// app.use(logger); 
+app.use(helmet())
+
+
+//COnfiguration
+console.log('Application Name: ')
+
+
+if(app.get('env') === 'development') {
+  app.use(morgan('tiny'))
+  console.log('Morgan is enabled')
+}
+
 
 const genres = [
   {
